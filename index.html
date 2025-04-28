@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student registration System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Registration system</h1>
+        <form id="studentform">
+            <input type="text" id="studentname" pattern="[A-Za-z ]*" placeholder="Enter name" required>
+            <input inputmode="numeric" oninput="this.value = this.value.replace(/\D+/g, '')" id="studentid" placeholder="Enter Id number" required>
+            <!--input takes number with out the increment-->
+            <input type="email" id="studentemail" pattern="^[a-zA-Z0-9]+@gmail\.com$" placeholder="Enter email" required>
+            <!--email validator-->
+            <input inputmode="numeric" oninput="this.value = this.value.replace(/\D+/g, '')" id="studentcontact" placeholder="Enter contact number" requ    d>
+            
+            <div class="addnreset">
+                <button type="submit" class="addbtn" id="addstudentbtn">Add Student</button>
+                <button type="button" class="resetbtn" id="resetstudentbtn" style="display:none">Reset</button>
+                <!--resetbtn display is set to none-->
+            </div>
+        </form>
+        <div class="tablecontainer">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Id</th>
+                        <th>Email</th>
+                        <th>Contact</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="studenttable">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="reg.js"></script>
+</body>
+</html>
